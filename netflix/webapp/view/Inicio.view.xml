@@ -1,0 +1,53 @@
+<mvc:View xmlns:f="sap.f" controllerName="netflix.controller.Inicio" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="page" title="Netflix com SAPUI5">
+        <subHeader>
+            <Toolbar id="_IDGenToolbar1">
+                <Link id="_IDGenLink1" text="Inicio" press="onPressInit"/>
+                <Link id="_IDGenLink2" text="Series" press="onPressSeries"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <SearchField  width="40%" search="onSearch" id="inputSearch"></SearchField>
+            </Toolbar>
+        </subHeader>
+        <content>
+            <FlexBox justifyContent="SpaceAround" alignItems="Center"  items="{movies>/titles}" wrap="Wrap">
+                
+                    <VBox class="wrapperBox" alignContent="Center" >
+
+                        <Image src="{movies>jawSummary/backgroundImage/url}" width="100%" />
+                        <Image src="{movies>jawSummary/logoImage/url}" class="logo" />
+
+                        <FlexBox class="wrapperFlex" wrap="Wrap" alignContent="SpaceBetween" >
+                            <FlexBox class="item">
+                                <Text class="label" text="Title:" />
+                                <Text text="{movies>jawSummary/title}" />
+                            </FlexBox>
+                            <FlexBox  class="item" wrap="Wrap" alignContent="Center">
+                                <Text class="label" text="Synopsis:" />
+                                <Text text="{movies>jawSummary/synopsis}" />
+                            </FlexBox>
+                             
+                            <FlexBox class="genres item" wrap="Wrap" alignContent="Center">
+                                <Text class="label" text="Genres:" />
+                                <VBox items="{movies>jawSummary/genres}" >
+                                    <items>
+                                        <Text text="{movies>name}" />
+                                    </items>
+                                </VBox>
+                            </FlexBox>
+                           
+                           <FlexBox  class="item" wrap="Wrap" width="100%"   alignContent="Center">
+                                <Text class="label" text="Year:" />
+                                <Text text="{movies>jawSummary/releaseYear}" />
+                                
+                            </FlexBox>
+
+                        </FlexBox>
+                    </VBox>
+                
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>

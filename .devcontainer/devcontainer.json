@@ -1,0 +1,16 @@
+{
+    "name": "PHP Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"SAPSE.sap-ux-application-modeler-extension",
+				"SAPSE.sap-ux-help-extension",
+				"SAPSE.sap-ux-service-modeler-extension",
+				"SAPSE.sap-ux-fiori-tools-extension-pack",
+				"SAPSE.sap-ux-annotation-modeler-extension"
+			]
+		}
+	}
+}

@@ -1,0 +1,59 @@
+/* Estilos para o contêiner geral (.wrapperBox) */
+.wrapperBox {
+   margin-top: 10px;
+   width: 350px;
+   height: 455px;
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+   margin-bottom: 10px;
+   position: relative; 
+   overflow: hidden; 
+   transition: box-shadow 0.3s;
+}
+
+.wrapperBox .logo {
+   width: 200px;
+   height: 200px;
+   object-fit: scale-down;
+   transition: all 0.5s;
+   position: absolute;
+   bottom: -45px;
+   right: 10px;
+}
+
+
+/* Estilos para a imagem dentro do contêiner geral */
+.wrapperBox img {
+   position: relative;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   transition: all 0.5s;
+}
+
+
+
+
+/* Efeito de escala na imagem ao passar o mouse sobre o contêiner */
+.wrapperBox:hover img {
+   transform: scale(1.02); /* Altere o valor conforme necessário */
+}
+
+/* Estilos para o contêiner de flex (.wrapperFlex) */
+.wrapperBox .wrapperFlex {
+   padding: 10px;
+   color: black !important;
+}
+
+/* Estilos para as labels dentro do contêiner de flex */
+.wrapperBox .wrapperFlex .label {
+   font-weight: bold;
+}
+
+/* Margem entre os spans dentro do contêiner geral */
+.wrapperBox .wrapperFlex .genres span {
+    margin-right: 2px;
+}
+.wrapperBox .wrapperFlex .item{
+   padding: 5px 0;;
+}
