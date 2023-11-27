@@ -1,5 +1,5 @@
 {
-    "name": "PHP Dev Container",
+    "name": "Fiori Container",
     "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
 	"remoteUser": "root",
 	"customizations": {
